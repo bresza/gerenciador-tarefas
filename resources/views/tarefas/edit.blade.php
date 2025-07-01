@@ -1,10 +1,9 @@
 @extends('layouts.app')
-
+<!-- Código para editar as tarefas usando a mesma lógica do de criação -->
 @section('content')
 <h1>Editar Tarefa #{{ $tarefa->id }}</h1>
 <form action="{{ route('tarefas.update', $tarefa) }}" method="POST">
   @csrf @method('PUT')
-  <!-- mesmo código de campos, mas usando $tarefa->… em vez de old() -->
   <div class="mb-3">
     <label class="form-label">Título</label>
     <input type="text" name="titulo" class="form-control" value="{{ old('titulo',$tarefa->titulo) }}">

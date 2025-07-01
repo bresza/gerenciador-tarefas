@@ -1,5 +1,5 @@
 <?php
-
+//definição das rotas usadas
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TarefaController;
 
